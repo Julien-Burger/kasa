@@ -1,0 +1,17 @@
+.rating {
+    display: flex;
+    gap: 2px;
+    width: fit-content;
+
+    .fa-star {
+        font-size: 22px;
+    }
+}
+
+.activeStar {
+    color: #FF6060;
+}
+
+.noneActiveStar {
+    color: #E3E3E3;
+}

@@ -1,0 +1,37 @@
+.about {
+    flex: 1;
+    max-width: 1240px;
+    width: 92%;
+    margin-bottom: 40px;
+
+    .headerImg {
+        height: 223px;
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .collapses {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 83%;
+        margin: auto;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .about {
+        .collapses {
+            width: 100%;
+        }
+    }
+}

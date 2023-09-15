@@ -1,0 +1,126 @@
+@mixin carousel-arrow($rotation) {
+    position: absolute;
+    border: none;
+    background-color: rgba($color: #000000, $alpha: 0);
+    top: calc(50% - 68px / 2);
+    rotate: $rotation;
+    cursor: pointer;
+}
+
+.apartment {
+    flex: 1;
+    max-width: 1240px;
+    margin-bottom: 50px;
+    width: 92%;
+
+    .carousel {
+        height: 415px;
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+
+        .carousel-back-arrow {
+            @include carousel-arrow(-90deg);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+        }
+
+        span {
+            position: absolute;
+            left: 50%;
+            color: white;
+            bottom: 10px;
+        }
+
+        .carousel-forward-arrow {
+            @include carousel-arrow(90deg);
+
+            right: 0;
+        }
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+
+        .top-content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            .left-content {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 20px;
+    
+                .title {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    h1 {
+                        font-size: 36px;
+                        font-weight: 500;
+                        color: #FF6060;
+                    }
+    
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #FF6060;
+                    }
+                }
+
+                .tags {
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+    
+            .right-content {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: end;
+            }
+        }
+
+        .bottom-content {
+            display: flex;
+            gap: 100px;
+            margin-top: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .apartment {
+        .carousel {
+            height: 300px;
+        }
+    
+        .details {
+            .top-content {
+                flex-direction: column;
+                gap: 10px;
+        
+                .right-content {
+                    flex-direction: row-reverse;
+                    align-items: center;
+                }
+            }
+    
+            .bottom-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+}

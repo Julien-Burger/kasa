@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 92%;
+    max-width: 1240px;
+    padding: 40px 0px 50px 0px;
+    
+    nav {
+        display: flex;
+        align-items: center;
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+
+            a {
+                color: #FF6060;
+                font-size: 24px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &.active {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .header {
+        img {
+            width: 145px;
+        }
+
+        nav {
+            ul {
+                gap: 35px;
+
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
