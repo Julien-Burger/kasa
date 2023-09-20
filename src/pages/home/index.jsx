@@ -12,7 +12,10 @@ function Home() {
 			<section>
 				<img src={backgroundImg} alt="Une falaise" />
 				<div></div>
-				<h1>Chez vous, partout et ailleurs</h1>
+				<h1>
+					Chez vous,
+					<br /> partout et ailleurs
+				</h1>
 			</section>
 
 			<article>

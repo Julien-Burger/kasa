@@ -1,49 +1,8 @@
-@mixin carousel-arrow($rotation) {
-    position: absolute;
-    border: none;
-    background-color: rgba($color: #000000, $alpha: 0);
-    top: calc(50% - 68px / 2);
-    rotate: $rotation;
-    cursor: pointer;
-}
-
 .apartment {
     flex: 1;
     max-width: 1240px;
     margin-bottom: 50px;
     width: 92%;
-
-    .carousel {
-        height: 415px;
-        width: 100%;
-        border-radius: 20px;
-        overflow: hidden;
-        position: relative;
-
-        .carousel-back-arrow {
-            @include carousel-arrow(-90deg);
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            top: 0;
-        }
-
-        span {
-            position: absolute;
-            left: 50%;
-            color: white;
-            bottom: 10px;
-        }
-
-        .carousel-forward-arrow {
-            @include carousel-arrow(90deg);
-
-            right: 0;
-        }
-    }
 
     .details {
         display: flex;
@@ -53,6 +12,16 @@
             display: flex;
             justify-content: space-between;
             margin-top: 30px;
+
+            @media (max-width: 992px) {
+                flex-direction: column;
+                gap: 10px;
+
+                .right-content {
+                    flex-direction: row-reverse;
+                    align-items: center;
+                }
+            }
 
             .left-content {
                 display: flex;
@@ -97,10 +66,17 @@
             gap: 100px;
             margin-top: 24px;
         }
+
+        @media (max-width: 992px) {
+            .bottom-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
     }
 }
 
-@media screen and (max-width: 875px) {
+@media (max-width: 992px) {
     .apartment {
         .carousel {
             height: 300px;
@@ -117,10 +93,7 @@
                 }
             }
     
-            .bottom-content {
-                flex-direction: column;
-                gap: 20px;
-            }
+            
         }
     }
 }

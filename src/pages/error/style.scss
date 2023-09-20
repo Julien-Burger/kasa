@@ -7,33 +7,46 @@
     gap: 100px;
     flex: 1;
     max-width: 1440px;
-    width: 100%;
+    width: 90%;
+
+    img {
+        @media (max-width: 992px) {
+            width: 350px;
+        }
+
+        @media (max-width: 768px) {
+            width: 198px;
+        }
+    }
 
     p {
         font-size: 36px;
         color: #FF6060;
+
+        br {
+            display: none;
+        }
+
+        @media (max-width: 992px) {
+            font-size: 22px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+            text-align: center;
+
+            br {
+                display: block;
+            }
+        }
     }
 
     a {
         color: #FF6060;
         font-size: 18px;
         text-decoration: underline;
-    }
-}
 
-@media screen and (max-width: 920px) {
-    .errorPage {
-        img {
-            width: 198px;
-        }
-
-        p {
-            font-size: 18px;
-            text-align: center;
-            width: 250px;
-        }
-
-        a {
+        @media (max-width: 768px) {
             font-size: 14px;
         }
     }

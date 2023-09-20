@@ -5,8 +5,8 @@
     margin: auto;
     gap: 50px;
     margin-bottom: 50px;
-    width: 92%;
-    max-width: 1240px;
+    width: 90%;
+    max-width: 1440px;
 
     section {
         height: 223px;
@@ -14,6 +14,10 @@
         border-radius: 20px;
         overflow: hidden;
         position: relative;
+
+        @media (max-width: 768px) {
+            height: 111px;
+        }
 
         img {
             width: 100%;
@@ -36,6 +40,19 @@
             font-size: 48px;
             color: white;
             font-weight: 500;
+
+            br {
+                display: none;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+                left: 20px;
+
+                br {
+                    display: block;
+                }
+            }
         }
     }
 
@@ -47,36 +64,20 @@
         border-radius: 25px;
         padding: 50px;
 
-        a {
-            width: 100%;
-        }
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .home {
-        article {
+        @media (max-width: 992px) {
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 40px;
         }
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .home {
-        section {
-            h1 {
-                font-size: 24px;
-                top: calc(50% - 29px / 2);
-                left: calc(50% - 352.19px / 2);
-            }
-        }
-    
-        article {
+        @media (max-width: 768px) {
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 40px;
             background-color: rgba($color: #000000, $alpha: 0);
             padding: 0;
+        }
+
+        a {
+            width: 100%;
         }
     }
 }

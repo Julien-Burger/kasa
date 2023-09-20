@@ -5,6 +5,10 @@
 
     .fa-star {
         font-size: 22px;
+
+        @media (max-width: 380px) {
+            font-size: 18px;
+        }
     }
 }
 

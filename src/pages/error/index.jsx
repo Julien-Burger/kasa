@@ -8,7 +8,9 @@ function Error() {
 		<div className="errorPage">
 			<img src={errorImg} alt="404" />
 
-			<p>Oups! La page que vous demandez n'existe pas.</p>
+			<p>
+				Oups! La page que <br /> vous demandez n'existe pas.
+			</p>
 
 			<Link to="/" element={<Home />}>
 				Retourner sur la page d'accueil
